@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Futevôlei em casa</title>
+<meta name="description" content="Treinos, análise de fundamentos e testes de futevôlei para fazer em casa.">
+<meta name="theme-color" content="#1F5560">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Futevôlei">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<main class="wrap" id="app"></main>
+<nav class="nav" aria-label="Seções"><div class="nav-in">
+  <button data-tab="treino"><span class="dot"></span>Treino</button>
+  <button data-tab="analise"><span class="dot"></span>Análise</button>
+  <button data-tab="semana"><span class="dot"></span>Semana</button>
+  <button data-tab="perfil"><span class="dot"></span>Perfil</button>
+</div></nav>
+<div id="warn" class="warn" role="alert" hidden>Não foi possível salvar neste aparelho (armazenamento cheio ou bloqueado). Exporte um backup na aba Perfil.</div>
+<div id="player" class="player" hidden role="dialog" aria-modal="true" aria-label="Treino em andamento"></div>
+<div class="sr" aria-live="polite" id="live"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

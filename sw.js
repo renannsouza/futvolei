@@ -1,6 +1,6 @@
 // Service worker: guarda o app para funcionar offline.
 // Suba o número da versão ao publicar uma mudança para descartar o cache antigo.
-const VERSION = 'v1';
+const VERSION = 'v4';
 const CACHE = 'futevolei-' + VERSION;
 const FILES = [
   './', 'index.html', 'app.css', 'app.js', 'manifest.webmanifest',

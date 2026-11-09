@@ -394,6 +394,7 @@ function render() {
   else if (tab === 'semana') renderWeek();
   else renderTests();
   window.scrollTo(0, 0);
+  app.classList.remove('enter'); void app.offsetWidth; app.classList.add('enter');
 }
 
 function renderHome() {
@@ -429,8 +430,8 @@ function renderDetail(key) {
     b.setAttribute('aria-expanded', 'true');
     const it = adapt(w.items[+b.dataset.ex]), div = document.createElement('div');
     div.className = 'ex-open';
-    div.innerHTML = '<div class="board"></div><p>' + esc(EX[it[0]].how) + '</p>';
-    div.firstChild.appendChild(figure(it[0]).svg);
+    div.innerHTML = '<div class="ex-in"><div class="board"></div><p>' + esc(EX[it[0]].how) + '</p></div>';
+    div.querySelector('.board').appendChild(figure(it[0]).svg);
     box.appendChild(div);
   }));
   wirePlace(() => renderDetail(key));
